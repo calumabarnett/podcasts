@@ -3,11 +3,12 @@ package com.podcasts.data.parser
 import com.podcasts.domain.model.Episode
 import com.podcasts.domain.model.Podcast
 import nl.adaptivity.xmlutil.serialization.XML
+import nl.adaptivity.xmlutil.serialization.UnknownChildHandler
 
 class FeedParser {
     private val xml = XML {
         autoPolymorphic = true
-        unknownChildHandler = { _, _, _, _, _ -> emptyList() }
+        unknownChildHandler = UnknownChildHandler { _, _, _, _, _ -> emptyList() }
     }
 
     fun parse(xmlString: String, feedUrl: String): Pair<Podcast, List<Episode>> {

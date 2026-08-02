@@ -1,17 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.multiplatform)
+    id("org.jetbrains.kotlin.android")
     alias(libs.plugins.compose.compiler)
-}
-
-kotlin {
-    androidTarget {
-        compilations.all {
-            kotlinOptions {
-                jvmTarget = "21"
-            }
-        }
-    }
 }
 
 android {
@@ -36,6 +26,10 @@ android {
         sourceCompatibility = JavaVersion.VERSION_21
         targetCompatibility = JavaVersion.VERSION_21
     }
+
+    kotlinOptions {
+        jvmTarget = "21"
+    }
 }
 
 dependencies {
@@ -45,4 +39,7 @@ dependencies {
 
     implementation(libs.androidx.media3.exoplayer)
     implementation(libs.androidx.media3.session)
+
+    implementation(libs.koin.core)
+    implementation(libs.koin.android)
 }

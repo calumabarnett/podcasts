@@ -35,6 +35,3 @@ local.properties
 .idea/
 *.iml
 .DS_Store
-
-# VS Code
-.vscode/

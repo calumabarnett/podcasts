@@ -13,9 +13,7 @@ abstract class PodcastDatabase : RoomDatabase() {
 }
 
 @Suppress("NO_ACTUAL_FOR_EXPECT")
-expect object PodcastDatabaseConstructor : RoomDatabaseConstructor<PodcastDatabase> {
-    override fun initialize(): PodcastDatabase
-}
+expect object PodcastDatabaseConstructor : RoomDatabaseConstructor<PodcastDatabase>
 
 fun getRoomDatabase(builder: RoomDatabase.Builder<PodcastDatabase>): PodcastDatabase {
     return builder

@@ -35,6 +35,7 @@ kotlin {
             implementation(compose.runtime)
             implementation(compose.foundation)
             implementation(compose.material3)
+            implementation(compose.materialIconsExtended)
             implementation(compose.ui)
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
@@ -50,7 +51,6 @@ kotlin {
             implementation(libs.sqlite.bundled)
 
             implementation(libs.kotlinx.serialization.core)
-            implementation(libs.kotlinx.serialization.xml.core)
             implementation(libs.kotlinx.serialization.xml.serialization)
             implementation(libs.kotlinx.coroutines.core)
 

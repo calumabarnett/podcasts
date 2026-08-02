@@ -180,7 +180,7 @@ fun FullPlayerSheet(
                         isUserDragging = false
                         audioPlayer.seekTo(sliderPosition.toLong())
                     },
-                    valueRange = 0f..playbackState.duration.coerceAtLeast(1f).toFloat(),
+                    valueRange = 0f..playbackState.duration.coerceAtLeast(1L).toFloat(),
                     colors = SliderDefaults.colors(
                         thumbColor = MaterialTheme.colorScheme.primary,
                         activeTrackColor = MaterialTheme.colorScheme.primary
