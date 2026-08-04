@@ -14,7 +14,7 @@ class FeedParserTest {
               <channel>
                 <title>Test Podcast</title>
                 <description>A podcast for automated tests.</description>
-                <author>Jules</author>
+                <itunes:author>Jules</itunes:author>
                 <image>
                   <url>https://example.com/podcast.jpg</url>
                 </image>
