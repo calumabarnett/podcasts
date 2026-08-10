@@ -30,6 +30,12 @@ android {
     kotlinOptions {
         jvmTarget = "21"
     }
+
+    packaging {
+        jniLibs {
+            useLegacyPackaging = true
+        }
+    }
 }
 
 dependencies {
